@@ -1,0 +1,12 @@
+{
+  "$schema": "https://recomp.fyi/schema/v1.json",
+  "game": "Hot Wheels Extreme Racing",
+  "system": "PS1",
+  "type": "recomp",
+  "toolchain": "psxrecomp",
+  "status": "exploring",
+  "original": {
+    "region": "Europe",
+    "serial": "SLES-03595"
+  }
+}

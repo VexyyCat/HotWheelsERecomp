@@ -1,0 +1,5 @@
+Box art sourced from libretro-thumbnails (Named_Boxarts).
+Matched name: Hot Wheels - Extreme Racing (Europe)
+URL: https://thumbnails.libretro.com/Sony%20-%20PlayStation/Named_Boxarts/Hot%20Wheels%20-%20Extreme%20Racing%20(Europe).png
+https://github.com/libretro-thumbnails/libretro-thumbnails
+PNG is for README; TGA is for recomp-ui LAUNCHER_BOXART.

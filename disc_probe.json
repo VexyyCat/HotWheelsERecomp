@@ -1,0 +1,29 @@
+{
+  "cue_path": "/home/vexy/Descargas/HWER/Hot Wheels - Extreme Racing (Europe).cue",
+  "cue_name": "Hot Wheels - Extreme Racing (Europe).cue",
+  "bin_name": "Hot Wheels - Extreme Racing (Europe) (Track 01).bin",
+  "track_count": 17,
+  "data_track_size": 72135840,
+  "data_track_md5": "ad61b04efe487b49b0b5369f7e0aff1f",
+  "data_track_sha1": "731ef9c25297ddea0067bd7fa0f34209897fbd98",
+  "data_track_crc32": "c2735764",
+  "boot_exe": "SLES_035.95",
+  "serial": "SLES-03595",
+  "serial_exe": "SLES_035.95",
+  "volume_id": "SLES-03595",
+  "display_name": "Hot Wheels Extreme Racing",
+  "load_address": "0x80010000",
+  "entry_pc": "0x8001ABD8",
+  "text_size": "0x00058000",
+  "stack_base": "0x801FFFF0",
+  "require_cue": true,
+  "required_disc_fp": "70e2cf7d6d767f493df11e0ecee8e07afa769f867b36ae32e7d89922cf6d368b",
+  "boot_exe_sha256": "10368f3257d21c5874eca50781e974b89cd8620481ce6d7c54921ce1ef186cf7",
+  "seed_count": 138,
+  "warnings": [],
+  "notes": [
+    "entry_pc/load_address/text_size/stack_base taken from PS-X EXE header.",
+    "seeds are first-pass boot-EXE JAL targets (+ entry); expect to grow as overlays / runtime paths are discovered.",
+    "required_disc_fp is psxrecomp-toc-v1 (matches runtime DiscIdentity)."
+  ]
+}
