@@ -67,7 +67,7 @@ Optional box art under `launcher_assets/img/` may come from
 [libretro-thumbnails](https://github.com/libretro-thumbnails/libretro-thumbnails)
 (`Named_Boxarts`); see `BOXART_SOURCE.txt` when present.
 
-## Quick start (dev)
+## Quick start
 
 ```bash
 git submodule update --init --recursive
@@ -135,3 +135,73 @@ in release CI.
   <a href="https://discord.gg/Ad9BwSzctP"><img src=".github/raid-discord.png" alt="Join the Retro AI Development (R.A.I.D.) Discord" width="200"></a>
 </p>
 <!-- /retcomm-readme-raid -->
+
+# Hot Wheels: Extreme Racing (PSXRecomp Port)
+
+Recompilación estática nativa para PC de **Hot Wheels: Extreme Racing (Europe)** mediante [PSXRecomp](https://github.com).
+
+> **Aviso Legal:** Este repositorio no contiene archivos con derechos de copyright (imagen del juego ni BIOS de PlayStation). Debes aportar tus propias copias legales.
+
+---
+
+## 📁 Estructura de archivos requerida
+
+Coloca tu BIOS (`SCPH1001.BIN`) y la imagen de tu disco (.cue/.bin) en las carpetas correspondientes antes de compilar:
+
+```text
+Hot-Wheels-Extreme-Racing/
+├── bios/SCPH1001.BIN
+├── disc/Hot Wheels - Extreme Racing (Europe).cue (.bin)
+├── psxrecomp/
+├── game.toml
+└── symbols.toml
+```
+
+---
+
+## 🛠️ 1. Instalación de dependencias
+
+Instala CMake, Ninja, Python 3, ccache y las librerías de desarrollo para gráficos, audio y controles (SDL3):
+
+* **Void Linux:** `sudo xbps-install -Sy base-devel cmake ninja python3 git ccache pkg-config alsa-lib-devel pulseaudio-devel pipewire-devel libX11-devel wayland-devel MesaLib-devel vulkan-loader`
+* **Arch Linux:** `sudo pacman -S --needed base-devel cmake ninja python git ccache pkgconf alsa-lib libpulse pipewire libx11 wayland mesa vulkan-icd-loader`
+* **Ubuntu / Debian (22.04+):** `sudo apt-get update && sudo apt-get install -y build-essential cmake ninja-build python3 git ccache pkg-config libasound2-dev libpulse-dev libx11-dev libwayland-dev libgl1-mesa-dev libvulkan-dev`
+* **Fedora (39+):** `sudo dnf install -y gcc gcc-c++ make cmake ninja-build python3 git ccache pkgconf-pkg-config alsa-lib-devel pulseaudio-libs-devel libX11-devel wayland-devel mesa-libGL-devel vulkan-devel`
+* **Windows (10/11 - PowerShell como Administrador):** 
+  ```powershell
+  winget install -e --id Python.Python.3.12
+  winget install -e --id Git.Git
+  winget install -e --id Kitware.CMake
+  winget install -e --id Ninja-build.Ninja
+  winget install -e --id Microsoft.VisualStudio.2022.BuildTools --override "--quiet --wait --norestart --nocache --add Microsoft.VisualStudio.Workload.VCTools --includeRecommended"
+  ```
+  *(Nota Windows: usa la consola x64 Native Tools Command Prompt for VS 2022 para compilar).*
+
+---
+
+## 🚀 2. Clonar y compilar
+
+1. **Clonar repositorio:**
+   ```bash
+   git clone --recursive <URL-DE-TU-REPOSITORIO>
+   cd Hot-Wheels-Extreme-Racing
+   ```
+
+2. **Compilar el proyecto:**
+   * **Linux:**
+     ```bash
+     python3 psxrecomp/psxrecomp_cli.py rebuild --config game.toml --project-root . --build-dir build-release --no-pgo
+     ```
+   * **Windows** *(desde x64 Native Tools)*:
+     ```powershell
+     python psxrecomp/psxrecomp_cli.py rebuild --config game.toml --project-root . --build-dir build-release --no-pgo
+     ```
+
+---
+
+## 🎮 3. Ejecutar el juego
+
+Ejecuta el binario desde la raíz del proyecto:
+
+* **Linux:** `./build-release/Hot-Wheels-Extreme-Racing`
+* **Windows:** `.\build-release\Hot-Wheels-Extreme-Racing.exe`
