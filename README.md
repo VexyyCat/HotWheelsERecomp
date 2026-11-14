@@ -183,7 +183,7 @@ Instala CMake, Ninja, Python 3, ccache y las librerías de desarrollo para gráf
 
 1. **Clonar repositorio:**
    ```bash
-   git clone --recursive <URL-DE-TU-REPOSITORIO>
+   git clone --recursive https://github.com/VexyyCat/HotWheelsERecomp.git
    cd Hot-Wheels-Extreme-Racing
    ```
 
