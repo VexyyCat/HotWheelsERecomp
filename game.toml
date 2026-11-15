@@ -15,8 +15,8 @@ stack_base = "0x801FFFF0"
 # Digests are for data Track 01 (first BINARY FILE / TRACK 01).
 [prepare_disc]
 out_dir = "disc"
-bin_name = "Hot Wheels - Extreme Racing (Europe) (Track 01).bin"
-cue_name = "Hot Wheels - Extreme Racing (Europe).cue"
+bin_name = "Hot Wheels - Extreme Racing (Track 01).bin"
+cue_name = "Hot Wheels - Extreme Racing.cue"
 boot_exe = "SLES_035.95"
 known_sizes = [72135840]
 known_md5 = [
