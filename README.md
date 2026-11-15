@@ -197,6 +197,13 @@ Instala CMake, Ninja, Python 3, ccache y las librerías de desarrollo para gráf
      python psxrecomp/psxrecomp_cli.py rebuild --config game.toml --project-root . --build-dir build-release --no-pgo
      ```
 
+  * En caso de generar una advertencia al final, antes del Rebuild, eliminar la carpeta "build-release" y colocar lo siguiente: "
+    ```bash
+      cmake -S psxrecomp/recompiler -B psxrecomp/recompiler/build -G Ninja
+      cmake --build psxrecomp/recompiler/build --target psxrecomp-game
+      cmake --build psxrecomp/recompiler/build --target psxrecomp-bios
+    ```
+
 ---
 
 ## 🎮 3. Ejecutar el juego
